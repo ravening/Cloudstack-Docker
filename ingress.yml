@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cloudstack
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: \"false\"
+    nginx.ingress.kubernetes.io/rewrite-target: /client # this will replace /cloudstack with /client
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /cloudstack
+        backend:
+          serviceName: cloudstack
+          servicePort: 8080

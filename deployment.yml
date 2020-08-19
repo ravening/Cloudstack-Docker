@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudstack
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudstack
+  template:
+    metadata:
+      labels:
+        app: cloudstack
+    spec:
+      containers:
+      - name: test
+        image: test
+        imagePullPolicy: Never # if image is hosted on docker registry, remove this line
+        ports:
+        - containerPort: 8080

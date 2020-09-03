@@ -72,3 +72,10 @@ If you have deployed cloudstack 4.15 in service/deployment cloudstack415
     serviceName: cloudstack415
     servicePort: 8080
 ```
+
+
+## Continuous development using skaffold
+
+```
+skaffold dev
+```

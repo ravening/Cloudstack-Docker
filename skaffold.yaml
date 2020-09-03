@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta5
+kind: Config
+metadata:
+  name: cloudstack
+build:
+  artifacts:
+  - image: skaffold-1
+    context: .
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yml
+    - ingress.yml
+    - service.yml

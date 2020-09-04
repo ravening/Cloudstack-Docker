@@ -23,6 +23,9 @@ http://<IP of machine>:8080/client
 
 ## Deploying in Kubernetes
 
+You can deploy in kubernetes either manually or you can use skaffold for continuous development.\
+If you want to use skaffold then refer to the next section `Continuous development using skaffold`
+
 ### First deploy the pod
 
 ```
@@ -76,6 +79,19 @@ If you have deployed cloudstack 4.15 in service/deployment cloudstack415
 
 ## Continuous development using skaffold
 
+You can either use the existing `skaffold.yaml` file or you can create your own using `skaffold init`.
+
+Once you have the `skaffold.yaml` ready, you can just run the below command
+
 ```
 skaffold dev
+```
+
+This will build docker image and deploys it to kubernetes/minikube.
+
+If you make change to the source code, skaffold will automatically build new docker image and deploys it again.
+
+If you dont want to deploy to kubernetes then you can just build the docker image using
+```
+skaffold build
 ```

@@ -4,8 +4,10 @@ metadata:
   name: cloudstack
 build:
   artifacts:
-  - image: skaffold-1
+  - image: cloudstack-simulator
     context: .
+    docker:
+      dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:

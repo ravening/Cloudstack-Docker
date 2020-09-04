@@ -79,6 +79,7 @@ If you have deployed cloudstack 4.15 in service/deployment cloudstack415
 
 ## Continuous development using skaffold
 
+Skaffold can be installed using the instruction [here](https://skaffold.dev/docs/install/) \
 You can either use the existing `skaffold.yaml` file or you can create your own using `skaffold init`.
 
 Once you have the `skaffold.yaml` ready, you can just run the below command

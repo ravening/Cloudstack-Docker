@@ -13,8 +13,8 @@ spec:
         app: cloudstack
     spec:
       containers:
-      - name: test
-        image: test
-        imagePullPolicy: Never # if image is hosted on docker registry, remove this line
+      - name: cloudstack-simulator
+        image: rakgenius/cloudstack-simulator
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080

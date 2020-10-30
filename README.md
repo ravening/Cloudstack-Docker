@@ -2,7 +2,10 @@
 
 Files and docker images need to run Apache Cloudstack in Docker container
 
-## Build your own cloudstack docker image
+**Note: If you want to build your own docker image from scratch, refer to steps mentioned [here](https://github.com/ravening/Cloudstack-Docker/blob/master/BuildFromScratch.md)\
+else you can continue further**
+
+## Build your own incremental cloudstack docker image
 
 ```
 docker build -f Dockerfile -t <ANY NAME> .
